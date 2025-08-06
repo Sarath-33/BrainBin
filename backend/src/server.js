@@ -2,8 +2,6 @@ import express from "express";
 import dotenv from 'dotenv'
 import cors from "cors"
 import path from "path"
-
-
 import notesRoutes from "./routes/notesRoutes.js"
 import { connectDB } from "./config/db.js";
 import rateLimiter from "./middleware/rateLimiter.js";
@@ -24,8 +22,6 @@ if (process.env.NODE_ENV !== "production") {
 
 app.use(express.json());
 app.use(rateLimiter);
-
-
 
 // app.use((req,res,next)=>
 //     next()
